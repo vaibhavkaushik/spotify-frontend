@@ -1,8 +1,28 @@
 .song_nav_bar{
-
-    background-color: #181818;
+    background-color: #181818 !important;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    height: 10vh !important;
+}
+
+.song_controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.all_icons {
+    display: flex;
+}
+
+.song_play {
+    color: white;
+    padding : 20px;
+}
+
+.song_other {
+    padding-top: 25px;
 }
