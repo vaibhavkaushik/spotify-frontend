@@ -1,3 +1,53 @@
+# spotify-clone
+
+# 1. Features :
+
+```
+--  1. List of songs
+--  2. Play, Pause, Next, Prev songs
+--  3. Add songs / Upload songs / Delete songs
+        -- Universal Uploads
+        -- Per user Upload
+        -- Arrange songs priority
+--  4. Playlist / My library
+--  5. Sign Up
+--  6. Sign In (OAuth2)
+--  7. Sort songs based on genere, singer, language.
+--  8. Liked songs based Playlist
+--  9. Search songs
+--  10. Extra (Playback speed)
+        -- ML based recommendations
+        -- Mobile login
+```
+
+
+# 2. UI Requirements :
+
+```
+    -- Main Landing Page :
+        -- User based songs
+        -- Songs History
+        -- Add/Upload
+        -- Delete
+        -- Play/Pause/Next/Prev
+        -- Create Playlist
+        -- Display user name
+        -- Search bar
+```
+
+# 3. Tech Stack :
+
+```
+    -- UI - React
+    -- BE - Spring Boot
+    -- DB - Firebase, Postgres/MongoDB
+    -- Cache - Redis
+    -- Deployment - Docker, Heroku, AWS, Firebase
+    -- Verison Control - git
+    -- CI/CD - Jenkins (For UTs and ATs)
+```
+ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
