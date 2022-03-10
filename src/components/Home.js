@@ -1,7 +1,7 @@
 import React from 'react'
 import BottomNavigation from '@mui/material/BottomNavigation';
 import './Home.css'
-import { Favorite, FavoriteBorder, PlayCircleFilled, Repeat, Shuffle, SkipNext, SkipPrevious } from '@mui/icons-material';
+import { Favorite, FavoriteBorder, PauseCircleFilled, PlayCircleFilled, Repeat, Shuffle, SkipNext, SkipPrevious } from '@mui/icons-material';
 import { Avatar, Grid, Slider } from '@mui/material';
 import { color } from '@mui/system';
 import { red } from '@mui/material/colors';
@@ -12,11 +12,16 @@ import { red } from '@mui/material/colors';
 function Home() {
 
   const [flag, setFlag] = React.useState(true);
+  const [play, setPlay] = React.useState(true);
 
   const handleClick = () => {
     setFlag(!flag);
   };
   
+  const playPause = () => {
+    setPlay(!play);
+  };
+
   return (
     <div>
 
@@ -57,7 +62,7 @@ function Home() {
                                     <SkipPrevious className='song_play song_other' />
                                 </div>
                                 <div>
-                                    <PlayCircleFilled className='song_play' fontSize='large'/>
+                                    { play ? <PlayCircleFilled onClick={playPause} className='song_play' fontSize='large'/> : <PauseCircleFilled onClick={playPause} className='song_play' fontSize='large'/> }
                                 </div>
                                 <div>
                                     <SkipNext className='song_play song_other'/>
