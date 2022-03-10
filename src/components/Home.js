@@ -1,10 +1,22 @@
 import React from 'react'
 import BottomNavigation from '@mui/material/BottomNavigation';
 import './Home.css'
-import { PlayCircleFilled, Repeat, Shuffle, SkipNext, SkipPrevious } from '@mui/icons-material';
+import { Favorite, FavoriteBorder, PlayCircleFilled, Repeat, Shuffle, SkipNext, SkipPrevious } from '@mui/icons-material';
 import { Avatar, Grid, Slider } from '@mui/material';
+import { color } from '@mui/system';
+import { red } from '@mui/material/colors';
+
+
+
 
 function Home() {
+
+  const [flag, setFlag] = React.useState(true);
+
+  const handleClick = () => {
+    setFlag(!flag);
+  };
+  
   return (
     <div>
 
@@ -28,7 +40,9 @@ function Home() {
                                         </div>
                                     </div>
                                     <div className='song_reaction'>
-
+                                            {
+                                                flag ? <FavoriteBorder onClick={handleClick}/> : <Favorite onClick={handleClick} sx={{color:red[500]}}/>
+                                            }
                                     </div>
                             </div>
                         </div>
