@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from './NavBar'
 import {Grid} from '@mui/material';
 import './Home.css';
+import RightPage from './RightPage';
 
 function Home() {
   return (
@@ -13,8 +14,8 @@ function Home() {
                 </div>
             </Grid>
             <Grid item xs={10.5} >
-                <div className='right_page'>
-                    
+                <div>
+                   <RightPage/> 
                 </div>
             </Grid>
         </Grid>
