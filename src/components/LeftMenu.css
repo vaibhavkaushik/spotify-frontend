@@ -1,26 +1,5 @@
-.section {
-        font-size: large;
-        color: aliceblue !important;
-        padding: 10px;
-}
-
-.first_section, .home_info, .search_info, .library_info, .playlist_info, .likedsongs_info {
-        display: flex;
-}
-
-.app_name {
-        margin-top: 15px;
-        font-size: large;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 5px;
-}
-
-.texts {
-        margin-top: 0px;
-        margin-left: 10px;
-        font-size: smaller;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 5px;
+.banner {
+        font-size: x-small;
+        color: white !important;
+        padding: 15px;
 }
