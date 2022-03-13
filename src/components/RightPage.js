@@ -1,6 +1,7 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import './RightPage.css'
+import Song from './Song';
 import SongTile from './SongTile'
 
 function RightPage() {
@@ -17,21 +18,87 @@ function RightPage() {
   return (
     <div className='right_page'>
 
-        <Grid container spacing={1} direction={'column'} style={{ height: "100%" }}>
-
+    
+        <Grid container spacing={1} direction={'column'} style={{ width:'max-content'}}>
+        
         <Grid item xs={2}>
             <div className='right_page_greet'>
                Good evening
             </div>
-        </Grid>
-        
-        <Grid item xs={2}>
             <div className='right_page_top_recommendation'>
-                <Grid container spacing={1}>
+                <Grid container spacing={2}>
                     {
                         songs.map((song,item)=>{
-                           return <Grid item xs={4}>
+                           return <Grid item xs={4} xl={4}>
                                 <SongTile songDetails = {song}/>
+                            </Grid>
+                        })
+                    }
+                </Grid>
+            </div>
+        </Grid>
+
+        <Grid item xs={2}>
+            <div className='right_page_bottom_greet'>
+               Good evening
+            </div>
+            <div className='right_page_top_recommendation'>
+                <Grid container spacing={2}>
+                    {
+                        songs.map((song,item)=>{
+                           return <Grid item xs={2} xl={2} >
+                                <Song songDetails = {song}/>
+                            </Grid>
+                        })
+                    }
+                </Grid>
+            </div>
+        </Grid>
+
+        <Grid item xs={2}>
+            <div className='right_page_bottom_greet'>
+               Good evening
+            </div>
+            <div className='right_page_top_recommendation'>
+                <Grid container spacing={2}>
+                    {
+                        songs.map((song,item)=>{
+                           return <Grid item xs={2} xl={2} >
+                                <Song songDetails = {song}/>
+                            </Grid>
+                        })
+                    }
+                </Grid>
+            </div>
+        </Grid>
+
+        <Grid item xs={2}>
+            <div className='right_page_bottom_greet'>
+               Good evening
+            </div>
+            <div className='right_page_top_recommendation'>
+                <Grid container spacing={2}>
+                    {
+                        songs.map((song,item)=>{
+                           return <Grid item xs={2} xl={2} >
+                                <Song songDetails = {song}/>
+                            </Grid>
+                        })
+                    }
+                </Grid>
+            </div>
+        </Grid>
+
+        <Grid item xs={2}>
+            <div className='right_page_bottom_greet'>
+               Good evening
+            </div>
+            <div className='right_page_top_recommendation'>
+                <Grid container spacing={2}>
+                    {
+                        songs.map((song,item)=>{
+                           return <Grid item xs={2} xl={2} >
+                                <Song songDetails = {song}/>
                             </Grid>
                         })
                     }

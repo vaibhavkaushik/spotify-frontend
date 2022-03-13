@@ -1,13 +1,13 @@
 import React from 'react'
 import { Avatar, Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
 
-function SongTile({songDetails}) {
+function Song({songDetails}) {
 
   return (
-              <Card sx={{ display: 'flex',  backgroundColor:'#2c2a35'  }}>
+              <Card sx={{ display: 'flex', flexDirection: 'column' , backgroundColor:'#2c2a35' }}>
                     <CardMedia
                         component="img"
-                        sx={{ minWidth:100, minHeight:100, maxWidth: 100, maxHeight: 100 }}
+                        sx={{ height: 200 }}
                         image={songDetails.songImageUrl}
                         alt="Live from space album cover"
                     />
@@ -20,4 +20,4 @@ function SongTile({songDetails}) {
         )
 }
 
-export default SongTile
+export default Song
