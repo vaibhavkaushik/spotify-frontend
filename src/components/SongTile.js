@@ -4,12 +4,11 @@ import { Avatar, Box, Card, CardContent, CardMedia, Grid, Typography } from '@mu
 function SongTile({songDetails}) {
 
   return (
-              <Card sx={{ display: 'flex',  backgroundColor:'#2c2a35'  }}>
+              <Card sx={{ display: 'flex',  backgroundColor:'#2c2a35' }}>
                     <CardMedia
                         component="img"
-                        sx={{ minWidth:100, minHeight:100, maxWidth: 100, maxHeight: 100 }}
+                        sx={{ minWidth:100, minHeight:100, maxWidth: 100, maxHeight: 100}}
                         image={songDetails.songImageUrl}
-                        alt="Live from space album cover"
                     />
                     <CardContent sx={{display:'flex',justifyContent: "center",flexDirection: "column"}}>
                       <Typography sx={{color:'white', fontWeight:'bold', fontSize:15}} >
