@@ -85,7 +85,7 @@ function RightPage() {
     <div className='right_page'>
 
     
-        <Grid container spacing={1} direction={'column'} style={{ width:'max-content'}}>
+        <Grid container spacing={1} direction={'column'}>
         
         <TopRecommendations topData={topDataObj} />
         {
