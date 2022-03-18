@@ -3,7 +3,6 @@ import NavBar from './NavBar'
 import {Grid} from '@mui/material';
 import './Home.css';
 import RightPage from './RightPage';
-import LeftMenu from './LeftMenu';
 import TopMenu from './TopMenu';
 
 function Home() {
