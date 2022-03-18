@@ -4,10 +4,10 @@ import { Avatar, Box, Card, CardContent, CardMedia, Grid, Typography } from '@mu
 function Song({songDetails}) {
 
   return (
-              <Card sx={{ display: 'flex', flexDirection: 'column' , backgroundColor:'#2c2a35' }}>
+              <Card sx={{ display: 'flex', flexDirection: 'column' , backgroundColor:'#2c2a35', padding:2, borderRadius:2 }}>
                     <CardMedia
                         component="img"
-                        sx={{ height: 200 }}
+                        sx={{ height: 200, borderRadius:2 }}
                         image={songDetails.songImageUrl}
                         alt="Live from space album cover"
                     />

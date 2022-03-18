@@ -9,14 +9,17 @@ function Home() {
   return (
     <div>
         <Grid container direction={'column'}>
-            <Grid item >
+            <Grid item xs={1}>
               <TopMenu/>
             </Grid>
-            <Grid item style={{marginLeft:25}} >
+            <Grid xs={9} item style={{marginLeft:25, marginBottom:'5%'}} >
               <RightPage/> 
             </Grid>
+            <Grid xs={2} item>
+              <NavBar/>
+            </Grid>
         </Grid>
-        <NavBar/>
+        
     </div>
   )
 }
