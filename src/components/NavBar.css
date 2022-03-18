@@ -5,6 +5,8 @@
     left: 0;
     right: 0;
     height: 10vh !important;
+    min-width:50%; /* or whatever width you want. */
+    display: inline-block;
 }
 
 .song_controls {
@@ -68,7 +70,8 @@
 }
 
 .volume_controls {
-    max-width:30%;
+    width:250px; /* or whatever width you want. */
+    max-width:250px; /* or whatever width you want. */
     margin-left: auto;
     margin-right: 0;
     padding: 25px;

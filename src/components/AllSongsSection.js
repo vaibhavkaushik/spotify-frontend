@@ -12,7 +12,7 @@ function AllSongsSection({allSongsData}) {
                 }
             </div>
             <div className='right_page_top_recommendation'>
-                <Grid container spacing={2}>
+                <Grid container spacing={1}>
                     {
                         allSongsData.songs.map((song,item)=>{
                            return <Grid item xs={2} xl={2} >

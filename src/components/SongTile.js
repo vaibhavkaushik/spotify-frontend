@@ -11,7 +11,7 @@ function SongTile({songDetails}) {
                         image={songDetails.songImageUrl}
                     />
                     <CardContent sx={{display:'flex',justifyContent: "center",flexDirection: "column"}}>
-                      <Typography sx={{color:'white', fontWeight:'bold', fontSize:15}} >
+                      <Typography sx={{whiteSpace: 'nowrap', overflow: 'hidden',  textOverflow: 'ellipsis', color:'white', fontWeight:'bold', fontSize:15}} >
                           {songDetails.songName}
                       </Typography>
                     </CardContent>                                                                          
