@@ -1,5 +1,11 @@
 # spotify-clone
 
+# JAR Deplyment
+```
+-- 2 Separate Microservices for UI and BE. So using JAR instead of WAR
+
+```
+
 # 1. Features :
 
 ```
