@@ -33,6 +33,8 @@ export default function SignUp() {
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
+      firstName: data.get('firstName'),
+      lastName: data.get('lastName'),
       password: data.get('password'),
     });
   };
@@ -88,6 +90,49 @@ export default function SignUp() {
                   autoComplete="email"
                 />
               </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="phone_no"
+                  label="Phone Number"
+                  name="phone_no"
+                  autoComplete="phone_no"
+                />
+              </Grid>
+              
+                    <Grid item xs={6} sm={3}>
+                        <TextField
+                        autoComplete="given-name"
+                        name="firstName"
+                        required
+                        fullWidth
+                        id="firstName"
+                        label="YYYY"
+                        autoFocus
+                        />
+                    </Grid>
+                    <Grid item xs={8} sm={6}>
+                        <TextField
+                        required
+                        fullWidth
+                        id="lastName"
+                        label="Month"
+                        name="lastName"
+                        autoComplete="family-name"
+                        />
+                    </Grid>
+                    <Grid item xs={6} sm={3}>
+                        <TextField
+                        required
+                        fullWidth
+                        id="lastName"
+                        label="Day"
+                        name="lastName"
+                        autoComplete="family-name"
+                        />
+                    </Grid>
+            
               <Grid item xs={12}>
                 <TextField
                   required
