@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 
@@ -31,12 +32,30 @@ export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    const user = {
       email: data.get('email'),
-      firstName: data.get('firstName'),
-      lastName: data.get('lastName'),
+      name: data.get('firstName')+" "+data.get('lastName'),
       password: data.get('password'),
-    });
+      dob: data.get('year')+"-"+data.get('month')+"-"+data.get('day'),
+      contact_no: data.get('contact_no')
+    }
+    console.log(user); 
+    axios.post('http://localhost:8080/users', {
+      'name' : user.name,
+      'email':user.email,
+      'password':user.password,
+      'dob':user.dob,
+      'contact_no':user.contact_no
+    },
+    {
+      headers: {"Access-Control-Allow-Origin": "*"}
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });  
   };
 
   return (
@@ -94,20 +113,20 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="phone_no"
-                  label="Phone Number"
-                  name="phone_no"
-                  autoComplete="phone_no"
+                  id="contact_no"
+                  label="Contact Number"
+                  name="contact_no"
+                  autoComplete="contact_no"
                 />
               </Grid>
               
                     <Grid item xs={6} sm={3}>
                         <TextField
                         autoComplete="given-name"
-                        name="firstName"
+                        name="year"
                         required
                         fullWidth
-                        id="firstName"
+                        id="year"
                         label="YYYY"
                         autoFocus
                         />
@@ -116,9 +135,9 @@ export default function SignUp() {
                         <TextField
                         required
                         fullWidth
-                        id="lastName"
+                        id="month"
                         label="Month"
-                        name="lastName"
+                        name="month"
                         autoComplete="family-name"
                         />
                     </Grid>
@@ -126,9 +145,9 @@ export default function SignUp() {
                         <TextField
                         required
                         fullWidth
-                        id="lastName"
+                        id="day"
                         label="Day"
-                        name="lastName"
+                        name="day"
                         autoComplete="family-name"
                         />
                     </Grid>
